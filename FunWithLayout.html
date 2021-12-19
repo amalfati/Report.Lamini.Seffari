@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="en">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Report | Application Using Main Window:</title>
+
+
+
+
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .fishes {
+            position: relative;
+            top: 20px;
+            left: 235px;
+        }
+        
+        .fish {
+            position: absolute;
+            top: 60px;
+            left: 80px;
+        }
+    </style>
+
+</head>
+
+
+
+<body style="background-color:rgb(0, 0, 0);">
+    <div style="position: relative; left: 0; top: 0;">
+        <img src="image/BB.PNG" class="fishes" />
+        <img src="" class="fish" />
+    </div>
+    <header class="site-header">
+
+        <div class="wrapper">
+
+            <span class="site-title">
+      
+    </span>
+
+            <nav class="site-nav">
+                <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+                <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="">
+                <div class="post">
+                    <section id=c>
+                        <header class="post-header">
+                            <h1 class="post-title" style="color:#a3a3a3"> Report: <span class=caret>Application Using  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Main Window: </span>
+
+                </div>
+                </h1>
+
+                </header>
+
+
+
+
+
+
+
+                <center>
+
+                    <div id="toc_container" style="background-color:rgb(0, 0, 0);">
+                        <p class="toc_title">Table of Contents</p>
+                        <li>
+                            <a href="#introduction" id="markdown-toc-introduction">
+                                <p style="color:red"><u>1. Introduction</u> </span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#SpreadSheet" id="markdown-toc-SpreadSheet">
+                                <p style="color:red"><u>2. SpreadSheet</u></p>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#Text-Editor" id="markdown-toc-Text-Editor">
+                                <p style="color:red"><u>3. Text Editor</u> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Issues" id="markdown-toc-Issues">
+                                <p style="color:red"><u>4. Issues</u> </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#conclusion" id="markdown-toc-conclusion">
+                                <p style="color:red"><u>5. Conclusion</u></p>
+                            </a>
+                        </li>
+                    </div>
+
+
+                </center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div>
+                    <h1 id="introduction">
+                        <u style="color:#a50202">Introduction</u></p>
+                    </h1>
+
+
+
+                    <p style="color:#a3a3a3">
+                        In this practical course, we will use Qt Designer which is a Qt tool that provides you with a what-you-see-is-what-you-get (WYSIWYG) user interface to create GUIs for your PyQt applications productively and efficiently. With this tool, you create GUIs
+                        by dragging and dropping QWidget objects on an empty form, and test them using different styles and resolutions.
+                    </p>
+                </div>
+
+                <div>
+                    <h1 id="SpreadSheet" style="color:#a30000"><u>SpreadSheet</u></h1>
+
+
+                    <p style="color:#a3a3a3">In our first task we will create a SpreadSheet which is an electronic document in which data is arranged in the rows and columns of a grid </p>
+
+
+
+
+
+
+
+
+                    <p style="color:#979797"><code class="language-plaintext highlighter-black">SpreadSheet.h</code> with the following code:</p>
+
+
+
+                    <pre style="color:#d1d1d1;background:#000000;">
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">ifndef</span><span style="color:#008073; "> SPREADSHEET_H</span>
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">define</span><span style="color:#008073; "> SPREADSHEET_H</span>
+                        
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QMainWindow</span><span style="color:#02d045; ">&gt;</span>
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QTableWidget</span><span style="color:#02d045; ">&gt;</span>
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QAction</span><span style="color:#02d045; ">&gt;</span>
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QMenu</span><span style="color:#02d045; ">&gt;</span>
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QToolBar</span><span style="color:#02d045; ">&gt;</span>
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QLabel</span><span style="color:#02d045; ">&gt;</span>
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QStatusBar</span><span style="color:#02d045; ">&gt;</span>
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QSettings</span><span style="color:#02d045; ">&gt;</span>
+                        
+                        
+                        <span style="color:#e66170; font-weight:bold; ">class</span> SpreadSheet <span style="color:#b060b0; ">:</span> <span style="color:#e66170; font-weight:bold; ">public</span> <span style="color:#e66170; font-weight:bold; ">QMainWindow</span>
+                        <span style="color:#b060b0; ">{</span>
+                            <span style="color:#008073; ">Q_OBJECT</span>
+                        
+                        <span style="color:#e66170; font-weight:bold; ">public</span><span style="color:#e34adc; ">:</span>
+                            SpreadSheet<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QWidget</span> <span style="color:#d2cd86; ">*</span>parent <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">nullptr</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#d2cd86; ">~</span>SpreadSheet<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        
+                        <span style="color:#e66170; font-weight:bold; ">protected</span><span style="color:#e34adc; ">:</span>
+                            <span style="color:#e66170; font-weight:bold; ">void</span> setupMainWidget<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">void</span> createActions<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">void</span> createMenus<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">void</span> createToolBars<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">void</span> makeConnexions<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        
+                        <span style="color:#e66170; font-weight:bold; ">private slots</span><span style="color:#e34adc; ">:</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> close<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> updateStatusBar<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">int</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span> <span style="color:#9999a9; ">//Respond for the call changed</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> gocellslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> finddialog<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> saveSlot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> openslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> saveasslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> aboutslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> aboutQtslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">protected</span><span style="color:#e34adc; ">:</span>
+                             <span style="color:#e66170; font-weight:bold; ">void</span> saveContent<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QString</span> filename<span style="color:#d2cd86; ">)</span><span style="color:#e66170; font-weight:bold; ">const</span><span style="color:#b060b0; ">;</span>
+                             <span style="color:#e66170; font-weight:bold; ">void</span> saveasContent<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QString</span> filename<span style="color:#d2cd86; ">)</span><span style="color:#e66170; font-weight:bold; ">const</span><span style="color:#b060b0; ">;</span>
+                             <span style="color:#e66170; font-weight:bold; ">void</span> loadContent<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QString</span> filename<span style="color:#d2cd86; ">)</span><span style="color:#e66170; font-weight:bold; ">const</span><span style="color:#b060b0; ">;</span>
+                         <span style="color:#9999a9; ">//Pointers</span>
+                        <span style="color:#e66170; font-weight:bold; ">private</span><span style="color:#e34adc; ">:</span>
+                            <span style="color:#9999a9; ">// --------------- Central Widget -------------//</span>
+                            <span style="color:#e66170; font-weight:bold; ">QTableWidget</span> <span style="color:#d2cd86; ">*</span>spreadsheet<span style="color:#b060b0; ">;</span>
+                            <span style="color:#9999a9; ">// --------------- Actions       --------------//</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span> newFile<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span> open<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span> save<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span> saveAs<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span> <span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>cut<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span><span style="color:#e66170; font-weight:bold; ">copy</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>paste<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>deleteAction<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span><span style="color:#e66170; font-weight:bold; ">find</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>row<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>Column<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>all<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>goCell<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>recalculate<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span><span style="color:#e66170; font-weight:bold; ">sort</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>showGrid<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>auto_recalculate<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>about<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QAction</span> <span style="color:#d2cd86; ">*</span>aboutQt<span style="color:#b060b0; ">;</span>
+                        
+                        
+                            <span style="color:#9999a9; ">// ---------- Menus ----------</span>
+                            <span style="color:#e66170; font-weight:bold; ">QMenu</span> <span style="color:#d2cd86; ">*</span>FileMenu<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QMenu</span> <span style="color:#d2cd86; ">*</span>editMenu<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QMenu</span> <span style="color:#d2cd86; ">*</span>toolsMenu<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QMenu</span> <span style="color:#d2cd86; ">*</span>optionsMenu<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">QMenu</span> <span style="color:#d2cd86; ">*</span>helpMenu<span style="color:#b060b0; ">;</span>
+                        
+                        
+                            <span style="color:#9999a9; ">//  ----- - Widget pouyr la bare d'etat</span>
+                            <span style="color:#e66170; font-weight:bold; ">QLabel</span> <span style="color:#d2cd86; ">*</span>cellLocation<span style="color:#b060b0; ">;</span>  <span style="color:#9999a9; ">//position de la cellule active</span>
+                            <span style="color:#e66170; font-weight:bold; ">QLabel</span> <span style="color:#d2cd86; ">*</span>cellFormula<span style="color:#b060b0; ">;</span>   <span style="color:#9999a9; ">// Formuel de la cellue active</span>
+                          <span style="color:#e66170; font-weight:bold; ">QString</span> <span style="color:#d2cd86; ">*</span> currentFile<span style="color:#b060b0; ">;</span>
+                        
+                        
+                        <span style="color:#b060b0; ">}</span><span style="color:#b060b0; ">;</span>
+                        
+                        <span style="color:#008073; ">#</span><span style="color:#008073; ">endif</span><span style="color:#008073; "> </span><span style="color:#9999a9; ">// SPREADSHEET_H</span>
+                        </pre>
+
+
+
+
+                </div>
+
+
+                <p style="color:#979797"><code class="language-plaintext highlighter-rouge">SpreadSheet.cpp</code> with the following code:</p>
+
+
+                <pre style="color:#d1d1d1;background:#000000;">
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">"</span><span style="color:#40015a; ">spreadsheet.h</span><span style="color:#02d045; ">"</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">"</span><span style="color:#40015a; ">godialog.h</span><span style="color:#02d045; ">"</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">"</span><span style="color:#40015a; ">dialog1.h</span><span style="color:#02d045; ">"</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QPixmap</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QMenuBar</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QToolBar</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QApplication</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QMessageBox</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QString</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QFileDialog</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QTextStream</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QIODevice</span><span style="color:#02d045; ">&gt;</span>
+                    
+                    
+                    
+                    
+                    SpreadSheet<span style="color:#b060b0; ">::</span>SpreadSheet<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QWidget</span> <span style="color:#d2cd86; ">*</span>parent<span style="color:#d2cd86; ">)</span>
+                        <span style="color:#b060b0; ">:</span> <span style="color:#e66170; font-weight:bold; ">QMainWindow</span><span style="color:#d2cd86; ">(</span>parent<span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#9999a9; ">//Seting the spreadsheet</span>
+                    
+                        setupMainWidget<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#9999a9; ">// Creaeting Actions</span>
+                        createActions<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#9999a9; ">// Creating Menus</span>
+                        createMenus<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                        <span style="color:#9999a9; ">//Creating the tool bar</span>
+                        createToolBars<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#9999a9; ">//making the connexions</span>
+                        makeConnexions<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                        <span style="color:#9999a9; ">//Creating the labels for the status bar (should be in its proper function)</span>
+                        cellLocation <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QLabel</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">(1, 1)</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        cellFormula <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QLabel</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        statusBar<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addPermanentWidget<span style="color:#d2cd86; ">(</span>cellLocation<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        statusBar<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addPermanentWidget<span style="color:#d2cd86; ">(</span>cellFormula<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#9999a9; ">//intier non du fichier</span>
+                        currentFile<span style="color:#d2cd86; ">=</span><span style="color:#e66170; font-weight:bold; ">nullptr</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                        <span style="color:#e66170; font-weight:bold; ">QStringList</span> labels<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">for</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">auto</span> letter <span style="color:#d2cd86; ">=</span> <span style="color:#00c4c4; ">'A'</span><span style="color:#b060b0; ">;</span>letter<span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">=</span><span style="color:#00c4c4; ">'Z'</span><span style="color:#b060b0; ">;</span>letter<span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">)</span>
+                            labels<span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span> <span style="color:#e66170; font-weight:bold; ">QString</span><span style="color:#d2cd86; ">(</span>letter<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setVerticalHeaderLabels<span style="color:#d2cd86; ">(</span>labels<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>setupMainWidget<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        spreadsheet <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QTableWidget</span><span style="color:#b060b0; ">;</span>
+                        spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setRowCount<span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">100</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setColumnCount<span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">10</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        setCentralWidget<span style="color:#d2cd86; ">(</span>spreadsheet<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    SpreadSheet<span style="color:#b060b0; ">::</span><span style="color:#d2cd86; ">~</span>SpreadSheet<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> spreadsheet<span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#9999a9; ">// --------------- Actions       --------------//</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span>  newFile<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span>  open<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span>  save<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span>  saveAs<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span>  <span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> cut<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> <span style="color:#e66170; font-weight:bold; ">copy</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> paste<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> deleteAction<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> <span style="color:#e66170; font-weight:bold; ">find</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> row<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> Column<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> all<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> goCell<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> recalculate<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> <span style="color:#e66170; font-weight:bold; ">sort</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> showGrid<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> auto_recalculate<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> about<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> aboutQt<span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#9999a9; ">// ---------- Menus ----------</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> FileMenu<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> editMenu<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> toolsMenu<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> optionsMenu<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> helpMenu<span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>createActions<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#9999a9; ">// --------- New File -------------------</span>
+                       <span style="color:#e66170; font-weight:bold; ">QPixmap</span> newIcon<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">:/new_file.png</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       newFile <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span>newIcon<span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;New</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       newFile<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Ctrl+N</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                        <span style="color:#9999a9; ">// --------- open file -------------------</span>
+                       open <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Open</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       open<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Ctrl+O</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                       save <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Save</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       save<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Ctrl+S</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        
+                       saveAs <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">save &amp;As</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                       <span style="color:#e66170; font-weight:bold; ">QPixmap</span> cutIcon<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">:/cut_icon.png</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       cut <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span>newIcon<span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Cu&amp;t</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       cut<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Ctrl+X</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                       
+                       <span style="color:#e66170; font-weight:bold; ">copy</span> <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Copy</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#e66170; font-weight:bold; ">copy</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Ctrl+C</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                       paste <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Paste</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       paste<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Ctrl+V</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                       deleteAction <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Delete</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       deleteAction<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Del</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                       row  <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Row</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       Column <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Column</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       all <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;All</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       all<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Ctrl+A</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                    
+                       <span style="color:#e66170; font-weight:bold; ">QPixmap</span> searchIcon<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">:/resources/icons/search_icon.png</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#e66170; font-weight:bold; ">find</span><span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span>searchIcon<span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;find</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#e66170; font-weight:bold; ">find</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Ctrl+F</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                       <span style="color:#e66170; font-weight:bold; ">QPixmap</span> goCellIcon<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">:/go_to_icon.png</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       goCell <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span> goCellIcon<span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Go to Cell</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       deleteAction<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">f5</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                       recalculate <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Recalculate</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       recalculate<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">F9</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                       <span style="color:#e66170; font-weight:bold; ">sort</span> <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Sort</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                    
+                       showGrid <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Show Grid</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       showGrid<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setCheckable<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">true</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       showGrid<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setChecked<span style="color:#d2cd86; ">(</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>showGrid<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                       auto_recalculate <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Auto-recalculate</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       auto_recalculate<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setCheckable<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">true</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       auto_recalculate<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setChecked<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">true</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                    
+                       about <span style="color:#d2cd86; ">=</span>  <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;About</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       aboutQt <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">About &amp;Qt</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#9999a9; ">// --------- exit -------------------</span>
+                       <span style="color:#e66170; font-weight:bold; ">QPixmap</span> exitIcon<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">:/quit_icon.png</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#e66170; font-weight:bold; ">exit</span> <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#d2cd86; ">(</span>exitIcon<span style="color:#d2cd86; ">,</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">E&amp;xit</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setShortcut<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Ctrl+Q</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>close<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">auto</span> reply <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">QMessageBox</span><span style="color:#b060b0; ">::</span>question<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Exit</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span>
+                                                           <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Do you really want to quit?</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>reply <span style="color:#d2cd86; ">=</span><span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">QMessageBox</span><span style="color:#b060b0; ">::</span>Yes<span style="color:#d2cd86; ">)</span>
+                            qApp<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span><span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>createMenus<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#9999a9; ">// --------  File menu -------//</span>
+                        FileMenu <span style="color:#d2cd86; ">=</span> menuBar<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addMenu<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;File</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        FileMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>newFile<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                     FileMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>open<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        FileMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>save<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        FileMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>saveAs<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        FileMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addSeparator<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        FileMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                        <span style="color:#9999a9; ">//------------- Edit menu --------/</span>
+                        editMenu <span style="color:#d2cd86; ">=</span> menuBar<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addMenu<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Edit</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        editMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>cut<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        editMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">copy</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        editMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>paste<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        editMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>deleteAction<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        editMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addSeparator<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">auto</span> <span style="color:#e66170; font-weight:bold; ">select</span> <span style="color:#d2cd86; ">=</span> editMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addMenu<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Select</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">select</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>row<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">select</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>Column<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">select</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>all<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        editMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">find</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        editMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>goCell<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                    
+                        <span style="color:#9999a9; ">//-------------- Toosl menu ------------</span>
+                        toolsMenu <span style="color:#d2cd86; ">=</span> menuBar<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addMenu<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Tools</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        toolsMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>recalculate<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        toolsMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">sort</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                    
+                        <span style="color:#9999a9; ">//Optins menus</span>
+                        optionsMenu <span style="color:#d2cd86; ">=</span> menuBar<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addMenu<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Options</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        optionsMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>showGrid<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        optionsMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>auto_recalculate<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                        <span style="color:#9999a9; ">//----------- Help menu ------------</span>
+                        helpMenu <span style="color:#d2cd86; ">=</span> menuBar<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addMenu<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&amp;Help</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        helpMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>about<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        helpMenu<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>aboutQt<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>createToolBars<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                    
+                        <span style="color:#9999a9; ">//Crer une bare d'outils</span>
+                        <span style="color:#e66170; font-weight:bold; ">auto</span> toolbar1 <span style="color:#d2cd86; ">=</span> addToolBar<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">File</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                        <span style="color:#9999a9; ">//Ajouter des actions acette bar</span>
+                        toolbar1<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>newFile<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        toolbar1<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>save<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        toolbar1<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addSeparator<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        toolbar1<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                        <span style="color:#9999a9; ">//Creer une autre tool bar</span>
+                        <span style="color:#e66170; font-weight:bold; ">auto</span> toolbar2  <span style="color:#d2cd86; ">=</span> addToolBar<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">ToolS</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        toolbar2<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>addAction<span style="color:#d2cd86; ">(</span>goCell<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>updateStatusBar<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span> row<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">int</span> col<span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QString</span> cell<span style="color:#b060b0; ">{</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">(%0, %1)</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">}</span><span style="color:#b060b0; ">;</span>
+                       cellLocation<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setText<span style="color:#d2cd86; ">(</span>cell<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">arg</span><span style="color:#d2cd86; ">(</span>row<span style="color:#d2cd86; ">+</span><span style="color:#008c00; ">1</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">arg</span><span style="color:#d2cd86; ">(</span>col<span style="color:#d2cd86; ">+</span><span style="color:#008c00; ">1</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#e66170; font-weight:bold; ">QString</span> find1<span style="color:#b060b0; ">{</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">(%0,%1</span><span style="color:#02d045; ">"</span><span style="color:#b060b0; ">}</span><span style="color:#b060b0; ">;</span>
+                       cellLocation<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setText<span style="color:#d2cd86; ">(</span>find1<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">arg</span><span style="color:#d2cd86; ">(</span>row<span style="color:#d2cd86; ">+</span><span style="color:#008c00; ">1</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">arg</span><span style="color:#d2cd86; ">(</span>col<span style="color:#d2cd86; ">+</span><span style="color:#008c00; ">1</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>makeConnexions<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                    
+                       <span style="color:#9999a9; ">// --------- Connexion for the  select all action ----/</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>all<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span>
+                               spreadsheet<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QTableWidget</span><span style="color:#b060b0; ">::</span>selectAll<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#9999a9; ">// Connection for the  show grid</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>showGrid<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span>
+                               spreadsheet<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QTableWidget</span><span style="color:#b060b0; ">::</span>setShowGrid<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#9999a9; ">//Connection for the exit button</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>close<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#9999a9; ">//connectting the chane of any element in the spreadsheet with the update status bar</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>spreadsheet<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QTableWidget</span><span style="color:#b060b0; ">::</span>cellClicked<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span>  <span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>updateStatusBar<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>goCell<span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>gocellslot<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">find</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>finddialog<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>save<span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>saveSlot<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>saveAs<span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>saveasslot<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>open<span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>openslot<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>about<span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>aboutslot<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>aboutQt<span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>aboutQtslot<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>gocellslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                        statusBar<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>showMessage<span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Go Dialog</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span><span style="color:#008c00; ">2000</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       Godialog D<span style="color:#b060b0; ">;</span>
+                       <span style="color:#e66170; font-weight:bold; ">auto</span> reply <span style="color:#d2cd86; ">=</span>D<span style="color:#d2cd86; ">.</span>exec<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                       <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>reply<span style="color:#d2cd86; ">=</span><span style="color:#d2cd86; ">=</span><span style="color:#e66170; font-weight:bold; ">QDialog</span><span style="color:#b060b0; ">::</span>Accepted<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                           <span style="color:#e66170; font-weight:bold; ">QString</span> cell<span style="color:#d2cd86; ">=</span>D<span style="color:#d2cd86; ">.</span>gocell<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                           <span style="color:#e66170; font-weight:bold; ">int</span> row<span style="color:#d2cd86; ">=</span>cell<span style="color:#d2cd86; ">[</span><span style="color:#008c00; ">0</span><span style="color:#d2cd86; ">]</span><span style="color:#d2cd86; ">.</span>toLatin1<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">-</span><span style="color:#00c4c4; ">'A'</span><span style="color:#b060b0; ">;</span>
+                            cell<span style="color:#d2cd86; ">=</span>cell<span style="color:#d2cd86; ">.</span><span style="color:#e66170; font-weight:bold; ">remove</span><span style="color:#d2cd86; ">(</span><span style="color:#008c00; ">0</span><span style="color:#d2cd86; ">,</span><span style="color:#008c00; ">1</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">int</span> col <span style="color:#d2cd86; ">=</span>cell<span style="color:#d2cd86; ">.</span>toInt<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">-</span><span style="color:#008c00; ">1</span><span style="color:#b060b0; ">;</span>
+                            spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setCurrentCell<span style="color:#d2cd86; ">(</span>row<span style="color:#d2cd86; ">,</span>col<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                       <span style="color:#b060b0; ">}</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>finddialog<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                      Dialog1 D<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">auto</span> replay<span style="color:#d2cd86; ">=</span>D<span style="color:#d2cd86; ">.</span>exec<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>replay<span style="color:#d2cd86; ">=</span><span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">QDialog</span><span style="color:#b060b0; ">::</span>Accepted<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                    
+                            <span style="color:#e66170; font-weight:bold; ">auto</span> pattern <span style="color:#d2cd86; ">=</span>D<span style="color:#d2cd86; ">.</span>findcell<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                            <span style="color:#e66170; font-weight:bold; ">for</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span> i<span style="color:#d2cd86; ">=</span><span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>i<span style="color:#d2cd86; ">&lt;</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>rowCount<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>i<span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">)</span>
+                                <span style="color:#e66170; font-weight:bold; ">for</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span> j<span style="color:#d2cd86; ">=</span><span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>j<span style="color:#d2cd86; ">&lt;</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>columnCount<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>j<span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                                    <span style="color:#e66170; font-weight:bold; ">auto</span> content <span style="color:#d2cd86; ">=</span> spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>item<span style="color:#d2cd86; ">(</span>i<span style="color:#d2cd86; ">,</span>j<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>content<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>content<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>text<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">.</span>contains<span style="color:#d2cd86; ">(</span>pattern<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                            spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setCurrentCell<span style="color:#d2cd86; ">(</span>i<span style="color:#d2cd86; ">,</span>j<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">return</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#b060b0; ">}</span>
+                        <span style="color:#b060b0; ">}</span>
+                                <span style="color:#b060b0; ">}</span>
+                        <span style="color:#b060b0; ">}</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>saveSlot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                        <span style="color:#9999a9; ">//obtenir nom de fichier</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">!</span>currentFile<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                            <span style="color:#e66170; font-weight:bold; ">QFileDialog</span> D<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">auto</span> filename<span style="color:#d2cd86; ">=</span>D<span style="color:#d2cd86; ">.</span>getSaveFileName<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            currentFile<span style="color:#d2cd86; ">=</span><span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QString</span><span style="color:#d2cd86; ">(</span>filename<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            setWindowTitle<span style="color:#d2cd86; ">(</span>filename<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                        saveContent<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">*</span>currentFile<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>saveContent<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QString</span> filename<span style="color:#d2cd86; ">)</span> <span style="color:#e66170; font-weight:bold; ">const</span><span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QFile</span> file<span style="color:#d2cd86; ">(</span>filename<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>file<span style="color:#d2cd86; ">.</span>open<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QIODevice</span><span style="color:#b060b0; ">::</span>WriteOnly<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                    
+                            <span style="color:#e66170; font-weight:bold; ">QTextStream</span> out<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">&amp;</span>file<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">for</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span> i<span style="color:#d2cd86; ">=</span><span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>i<span style="color:#d2cd86; ">&lt;</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>rowCount<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>i<span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">)</span>
+                            <span style="color:#e66170; font-weight:bold; ">for</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span> j<span style="color:#d2cd86; ">=</span><span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>j<span style="color:#d2cd86; ">&lt;</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>columnCount<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>j<span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                                <span style="color:#e66170; font-weight:bold; ">auto</span> cell<span style="color:#d2cd86; ">=</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>item<span style="color:#d2cd86; ">(</span>i<span style="color:#d2cd86; ">,</span>j<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                                <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>cell<span style="color:#d2cd86; ">)</span>
+                                    out <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span>i<span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">,</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span> j <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#00c4c4; ">','</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span>cell<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>text<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#e66170; font-weight:bold; ">endl</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#b060b0; ">}</span>
+                    
+                        file<span style="color:#d2cd86; ">.</span>close<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>saveasslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                        <span style="color:#9999a9; ">//obtenir nom de fichier</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">!</span>currentFile<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                            <span style="color:#e66170; font-weight:bold; ">QFileDialog</span> D<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">auto</span> filename<span style="color:#d2cd86; ">=</span>D<span style="color:#d2cd86; ">.</span>getSaveFileName<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            currentFile<span style="color:#d2cd86; ">=</span><span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QString</span><span style="color:#d2cd86; ">(</span>filename<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            setWindowTitle<span style="color:#d2cd86; ">(</span>filename<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                        saveContent<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">*</span>currentFile<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>saveasContent<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QString</span> filename<span style="color:#d2cd86; ">)</span> <span style="color:#e66170; font-weight:bold; ">const</span><span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QFile</span> file<span style="color:#d2cd86; ">(</span>filename<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>file<span style="color:#d2cd86; ">.</span>open<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QIODevice</span><span style="color:#b060b0; ">::</span>WriteOnly<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                    
+                            <span style="color:#e66170; font-weight:bold; ">QTextStream</span> out<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">&amp;</span>file<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">for</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span> i<span style="color:#d2cd86; ">=</span><span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>i<span style="color:#d2cd86; ">&lt;</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>rowCount<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>i<span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">)</span>
+                            <span style="color:#e66170; font-weight:bold; ">for</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span> j<span style="color:#d2cd86; ">=</span><span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>j<span style="color:#d2cd86; ">&lt;</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>columnCount<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>j<span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                                <span style="color:#e66170; font-weight:bold; ">auto</span> cell<span style="color:#d2cd86; ">=</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>item<span style="color:#d2cd86; ">(</span>i<span style="color:#d2cd86; ">,</span>j<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                                <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>cell<span style="color:#d2cd86; ">)</span>
+                                    out <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span>i<span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">,</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span> j <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#00c4c4; ">','</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span>cell<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>text<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#e66170; font-weight:bold; ">endl</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#b060b0; ">}</span>
+                    
+                        file<span style="color:#d2cd86; ">.</span>close<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>openslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">!</span>currentFile<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                            <span style="color:#e66170; font-weight:bold; ">QFileDialog</span> D<span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">auto</span> filename<span style="color:#d2cd86; ">=</span>D<span style="color:#d2cd86; ">.</span>getOpenFileName<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            currentFile<span style="color:#d2cd86; ">=</span><span style="color:#e66170; font-weight:bold; ">new</span> <span style="color:#e66170; font-weight:bold; ">QString</span><span style="color:#d2cd86; ">(</span>filename<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            setWindowTitle<span style="color:#d2cd86; ">(</span>filename<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                        loadContent<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">*</span>currentFile<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>loadContent<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QString</span> filename<span style="color:#d2cd86; ">)</span> <span style="color:#e66170; font-weight:bold; ">const</span><span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QFile</span> file<span style="color:#d2cd86; ">(</span>filename<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>file<span style="color:#d2cd86; ">.</span>open<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QIODevice</span><span style="color:#b060b0; ">::</span>ReadOnly <span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                    
+                            <span style="color:#e66170; font-weight:bold; ">QTextStream</span> out<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">&amp;</span>file<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">for</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span> i<span style="color:#d2cd86; ">=</span><span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>i<span style="color:#d2cd86; ">&lt;</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>rowCount<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>i<span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">)</span>
+                            <span style="color:#e66170; font-weight:bold; ">for</span><span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">int</span> j<span style="color:#d2cd86; ">=</span><span style="color:#008c00; ">0</span><span style="color:#b060b0; ">;</span>j<span style="color:#d2cd86; ">&lt;</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>columnCount<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>j<span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">+</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                                <span style="color:#e66170; font-weight:bold; ">auto</span> cell<span style="color:#d2cd86; ">=</span>spreadsheet<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>item<span style="color:#d2cd86; ">(</span>i<span style="color:#d2cd86; ">,</span>j<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                                <span style="color:#e66170; font-weight:bold; ">if</span><span style="color:#d2cd86; ">(</span>cell<span style="color:#d2cd86; ">)</span>
+                                    out <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span>i<span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">,</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span> j <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#00c4c4; ">','</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span>cell<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>text<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span><span style="color:#e66170; font-weight:bold; ">endl</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#b060b0; ">}</span>
+                    
+                        file<span style="color:#d2cd86; ">.</span>close<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>aboutslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QMessageBox</span><span style="color:#b060b0; ">::</span>about<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">About Spreadsheet</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">,</span>
+                                <span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&lt;h2&gt;Spreadsheet &lt;/h2&gt;</span><span style="color:#02d045; ">"</span>
+                    
+                                   <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">&lt;p&gt;Spreadsheet is a small application that </span><span style="color:#02d045; ">"</span>
+                                   <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">demonstrates QAction, QMainWindow, QMenuBar, </span><span style="color:#02d045; ">"</span>
+                                   <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">QStatusBar, QTableWidget, QToolBar, and many other </span><span style="color:#02d045; ">"</span>
+                                   <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Qt classes.</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>aboutQtslot<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QMessageBox</span><span style="color:#b060b0; ">::</span>aboutQt<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">about QT</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    </pre>
+
+
+
+                <p style="color:#979797"><code class="language-plaintext highlighter-black">dialog1.h</code> with the following code:</p>
+
+                <pre style="color:#d1d1d1;background:#000000;"><span style="color:#008073; ">#</span><span style="color:#008073; ">ifndef</span><span style="color:#008073; "> DIALOG1_H</span>
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">define</span><span style="color:#008073; "> DIALOG1_H</span>
+        
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QDialog</span><span style="color:#02d045; ">&gt;</span>
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QString</span><span style="color:#02d045; ">&gt;</span>
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QRegularExpression</span><span style="color:#02d045; ">&gt;</span>
+        
+        
+        <span style="color:#e66170; font-weight:bold; ">namespace</span> Ui <span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">class</span> Dialog1<span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        
+        <span style="color:#e66170; font-weight:bold; ">class</span> Dialog1 <span style="color:#b060b0; ">:</span> <span style="color:#e66170; font-weight:bold; ">public</span> <span style="color:#e66170; font-weight:bold; ">QDialog</span>
+        <span style="color:#b060b0; ">{</span>
+            <span style="color:#008073; ">Q_OBJECT</span>
+        
+        <span style="color:#e66170; font-weight:bold; ">public</span><span style="color:#e34adc; ">:</span>
+            <span style="color:#e66170; font-weight:bold; ">explicit</span> Dialog1<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QWidget</span> <span style="color:#d2cd86; ">*</span>parent <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">nullptr</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+            <span style="color:#d2cd86; ">~</span>Dialog1<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        
+            <span style="color:#e66170; font-weight:bold; ">QString</span> findcell<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#e66170; font-weight:bold; ">const</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#e66170; font-weight:bold; ">private</span><span style="color:#e34adc; ">:</span>
+            Ui<span style="color:#b060b0; ">::</span>Dialog1 <span style="color:#d2cd86; ">*</span>ui<span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span><span style="color:#b060b0; ">;</span>
+        
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">endif</span><span style="color:#008073; "> </span><span style="color:#9999a9; ">// DIALOG1_H</span>
+        </pre>
+
+                <p style="color:#979797"><code class="language-plaintext highlighter-black">dialog1.cpp</code> with the following code:</p>
+
+                <pre style="color:#d1d1d1;background:#000000;"><span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">"</span><span style="color:#40015a; ">dialog1.h</span><span style="color:#02d045; ">"</span>
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">"</span><span style="color:#40015a; ">ui_dialog1.h</span><span style="color:#02d045; ">"</span>
+        
+        Dialog1<span style="color:#b060b0; ">::</span>Dialog1<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QWidget</span> <span style="color:#d2cd86; ">*</span>parent<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">:</span>
+            <span style="color:#e66170; font-weight:bold; ">QDialog</span><span style="color:#d2cd86; ">(</span>parent<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">,</span>
+            ui<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">new</span> Ui<span style="color:#b060b0; ">::</span>Dialog1<span style="color:#d2cd86; ">)</span>
+        <span style="color:#b060b0; ">{</span>
+            ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setupUi<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#9999a9; ">//    QRegExp exp {"[A-Z][1-9][0-9]{0,2}"};</span>
+        <span style="color:#9999a9; ">//    ui-&gt;lineEdit-&gt;setValidator(new QRegExpValidator(exp));</span>
+        <span style="color:#b060b0; ">}</span>
+        
+        Dialog1<span style="color:#b060b0; ">::</span><span style="color:#d2cd86; ">~</span>Dialog1<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+        <span style="color:#b060b0; ">{</span>
+            <span style="color:#e66170; font-weight:bold; ">delete</span> ui<span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        <span style="color:#e66170; font-weight:bold; ">QString</span> Dialog1<span style="color:#b060b0; ">::</span>findcell<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#e66170; font-weight:bold; ">const</span>
+            <span style="color:#b060b0; ">{</span>
+                <span style="color:#e66170; font-weight:bold; ">return</span> ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>lineEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>text<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+            <span style="color:#b060b0; ">}</span>
+        </pre>
+
+                <p style="color:#979797"><code class="language-plaintext highlighter-black">godialog.h</code> with the following code:</p>
+
+
+
+                <pre style="color:#d1d1d1;background:#000000;"><span style="color:#008073; ">#</span><span style="color:#008073; ">ifndef</span><span style="color:#008073; "> GODIALOG_H</span>
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">define</span><span style="color:#008073; "> GODIALOG_H</span>
+        
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QDialog</span><span style="color:#02d045; ">&gt;</span>
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QString</span><span style="color:#02d045; ">&gt;</span>
+        <span style="color:#e66170; font-weight:bold; ">namespace</span> Ui <span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">class</span> Godialog<span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+        
+        <span style="color:#e66170; font-weight:bold; ">class</span> Godialog <span style="color:#b060b0; ">:</span> <span style="color:#e66170; font-weight:bold; ">public</span> <span style="color:#e66170; font-weight:bold; ">QDialog</span>
+        <span style="color:#b060b0; ">{</span>
+            <span style="color:#008073; ">Q_OBJECT</span>
+        
+        <span style="color:#e66170; font-weight:bold; ">public</span><span style="color:#e34adc; ">:</span>
+            <span style="color:#e66170; font-weight:bold; ">explicit</span> Godialog<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QWidget</span> <span style="color:#d2cd86; ">*</span>parent <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">nullptr</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+            <span style="color:#d2cd86; ">~</span>Godialog<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        
+            <span style="color:#e66170; font-weight:bold; ">QString</span> gocell<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#e66170; font-weight:bold; ">const</span> <span style="color:#b060b0; ">;</span>
+        
+        <span style="color:#e66170; font-weight:bold; ">private</span><span style="color:#e34adc; ">:</span>
+            Ui<span style="color:#b060b0; ">::</span>Godialog <span style="color:#d2cd86; ">*</span>ui<span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span><span style="color:#b060b0; ">;</span>
+        
+        <span style="color:#008073; ">#</span><span style="color:#008073; ">endif</span><span style="color:#008073; "> </span><span style="color:#9999a9; ">// GODIALOG_H</span>
+        </pre>
+
+                <p style="color:#979797"><code class="language-plaintext highlighter-black">godialog.cpp</code> with the following code:</p>
+
+
+
+
+
+                <pre style="color:#d1d1d1;background:#000000;"><span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">"</span><span style="color:#40015a; ">dialog1.h</span><span style="color:#02d045; ">"</span>
+    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">"</span><span style="color:#40015a; ">ui_dialog1.h</span><span style="color:#02d045; ">"</span>
+    
+    Dialog1<span style="color:#b060b0; ">::</span>Dialog1<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QWidget</span> <span style="color:#d2cd86; ">*</span>parent<span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">:</span>
+        <span style="color:#e66170; font-weight:bold; ">QDialog</span><span style="color:#d2cd86; ">(</span>parent<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">,</span>
+        ui<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">new</span> Ui<span style="color:#b060b0; ">::</span>Dialog1<span style="color:#d2cd86; ">)</span>
+    <span style="color:#b060b0; ">{</span>
+        ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setupUi<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+    
+    <span style="color:#b060b0; ">}</span>
+    
+    Dialog1<span style="color:#b060b0; ">::</span><span style="color:#d2cd86; ">~</span>Dialog1<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+    <span style="color:#b060b0; ">{</span>
+        <span style="color:#e66170; font-weight:bold; ">delete</span> ui<span style="color:#b060b0; ">;</span>
+    <span style="color:#b060b0; ">}</span>
+    <span style="color:#e66170; font-weight:bold; ">QString</span> Dialog1<span style="color:#b060b0; ">::</span>findcell<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span> <span style="color:#e66170; font-weight:bold; ">const</span>
+        <span style="color:#b060b0; ">{</span>
+            <span style="color:#e66170; font-weight:bold; ">return</span> ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>lineEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>text<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+        <span style="color:#b060b0; ">}</span>
+    </pre>
+
+                <p style="color:#979797"> We created 2 forms <code class="language-plaintext highlighter-black">ui </code> find(dialog1),Cell(godialog)</p>
+
+
+
+                <p style="color:#979797"> </p>
+
+                <div class="center">
+                    <img src="./image/find.PNG" />
+                    <div class="figcaption" style="color:#979797">
+                        Find(dialog1)
+                    </div>
+                </div>
+                <div class="center">
+                    <img src="./image/cell.PNG" />
+                    <div class="figcaption" style="color:#979797">
+                        Cell(godialog)
+                    </div>
+                </div>
+
+                <div class="center">
+                    <img src="./image/about.PNG" />
+                    <div class="figcaption" style="color:#979797">
+                        about spreadsheet output
+                    </div>
+                </div>
+
+                <div class="center">
+                    <img src="./image/aboutqt.PNG" />
+                    <div class="figcaption" style="color:#979797">
+                        aboutQt output
+                    </div>
+                </div>
+
+                <div class="center">
+                    <img src="./image/5.gif" />
+                    <div class="figcaption" style="color:#979797">
+                        Open from the browser
+                    </div>
+                </div>
+                <div class="center">
+                    <img src="./image/spread.PNG" />
+                    <div class="figcaption" style="color:#979797">
+                        SpreadSheet final output
+                    </div>
+                </div>
+
+                <blockquote>
+                    <p style="color:#979797">In the <a href="https://github.com/amalfati/Spreadsheet.git"><strong>SpreadSheet</strong></a>, you will find the zip of this exercise.
+                    </p>
+
+                </blockquote>
+
+
+
+
+
+                <h1 id="Text-Editor" style="color:#a50202"><u>Text Editor <img src="./image/az.gif" alt="Computer man" style="width:48px;height:48px;">                </u></h1>
+                <p style="color:#a3a3a3"> The application is a small text editor which allows you to create a text file, save it and other things …..</p>
+
+
+
+                <p style="color:#afafaf">we will use the designer for a rapid design to add File,Edit view and About ... </p>
+                <center>
+                    <img src="./image/ab.gif">
+                </center>
+
+                <p style="color:#afafaf">After unzipping all the images <a href="./image/icons.zip" style="color:#c70000">icons(6)</a> in the project texteditor we will add a new resource file , then selecting all the pictures, we want to add .</p>
+                <p style="color:#afafaf"> Like the image below</p>
+                <center>
+                    <img src="./image/aall.PNG">
+                </center>
+
+
+                <center>
+                    <img src="./image/2.gif">
+                </center>
+                <p style="color:#afafaf"> With SelectFont we can Change the text of our TextEditor which can help us to make our creations more interesting and eye-catching. Text can be changed to many different sizes, font styles, fonts , languages and effects...</p>
+
+                <p style="color:#afafaf"> Like the image below</p>
+                <center>
+                    <img src="./image/3.gif">
+                </center>
+                <p style="color:#aaaaaa"><code class="language-plaintext highlighter-black">mainwindow.h</code> with the following code:</p>
+
+
+
+
+                <pre style="color:#d1d1d1;background:#000000;">
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">ifndef</span><span style="color:#008073; "> MAINWINDOW_H</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">define</span><span style="color:#008073; "> MAINWINDOW_H</span>
+                    
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QMainWindow</span><span style="color:#02d045; ">&gt;</span>
+                    
+                    QT_BEGIN_NAMESPACE
+                    <span style="color:#e66170; font-weight:bold; ">namespace</span> Ui <span style="color:#b060b0; ">{</span> <span style="color:#e66170; font-weight:bold; ">class</span> MainWindow<span style="color:#b060b0; ">;</span> <span style="color:#b060b0; ">}</span>
+                    QT_END_NAMESPACE
+                    
+                    <span style="color:#e66170; font-weight:bold; ">class</span> MainWindow <span style="color:#b060b0; ">:</span> <span style="color:#e66170; font-weight:bold; ">public</span> <span style="color:#e66170; font-weight:bold; ">QMainWindow</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#008073; ">Q_OBJECT</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">public</span><span style="color:#e34adc; ">:</span>
+                        MainWindow<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QWidget</span> <span style="color:#d2cd86; ">*</span>parent <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">nullptr</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#d2cd86; ">~</span>MainWindow<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">private slots</span><span style="color:#e34adc; ">:</span>
+                        <span style="color:#e66170; font-weight:bold; ">void</span> newDocument<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> open<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> save<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> saveAs<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> <span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> <span style="color:#e66170; font-weight:bold; ">copy</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> cut<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> paste<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> undo<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> redo<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> selectFont<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> about<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">void</span> clear<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">private</span><span style="color:#e34adc; ">:</span>
+                        Ui<span style="color:#b060b0; ">::</span>MainWindow <span style="color:#d2cd86; ">*</span>ui<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QString</span> currentFile<span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">endif</span><span style="color:#008073; "> </span><span style="color:#9999a9; ">// MAINWINDOW_H</span>
+                    </pre>
+
+
+
+
+
+                <p style="color:#979797"><code class="language-plaintext highlighter-black">mainwindow.cpp</code> with the following code:</p>
+
+
+
+
+
+                <pre style="color:#d1d1d1;background:#000000;">
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">"</span><span style="color:#40015a; ">mainwindow.h</span><span style="color:#02d045; ">"</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include </span><span style="color:#02d045; ">"</span><span style="color:#40015a; ">ui_mainwindow.h</span><span style="color:#02d045; ">"</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QFile</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QMessageBox</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QFileDialog</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QTextStream</span><span style="color:#02d045; ">&gt;</span>
+                    <span style="color:#008073; ">#</span><span style="color:#008073; ">include</span><span style="color:#02d045; ">&lt;</span><span style="color:#40015a; ">QFontDialog</span><span style="color:#02d045; ">&gt;</span>
+                    
+                    
+                    MainWindow<span style="color:#b060b0; ">::</span>MainWindow<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QWidget</span> <span style="color:#d2cd86; ">*</span>parent<span style="color:#d2cd86; ">)</span>
+                        <span style="color:#b060b0; ">:</span> <span style="color:#e66170; font-weight:bold; ">QMainWindow</span><span style="color:#d2cd86; ">(</span>parent<span style="color:#d2cd86; ">)</span>
+                        <span style="color:#d2cd86; ">,</span> ui<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">new</span> Ui<span style="color:#b060b0; ">::</span>MainWindow<span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setupUi<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        setCentralWidget<span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionNewfile<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>newDocument<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionOpen<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>open<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionSave<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>save<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionSave_as<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>saveAs<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionExit<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span><span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionCopy<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span><span style="color:#e66170; font-weight:bold; ">copy</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionCut<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>cut<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionPaste<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>paste<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionUndo<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>undo<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionRedo<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>redo<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionSelectfont<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>selectFont<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionabout<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>about<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>actionclear<span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#d2cd86; ">&amp;</span>MainWindow<span style="color:#b060b0; ">::</span>clear<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>newDocument<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        currentFile<span style="color:#d2cd86; ">.</span>clear<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setText<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QString</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>open<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QString</span> fileName <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">QFileDialog</span><span style="color:#b060b0; ">::</span>getOpenFileName<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Open the file</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QFile</span> file<span style="color:#d2cd86; ">(</span>fileName<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        currentFile <span style="color:#d2cd86; ">=</span> fileName<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">!</span>file<span style="color:#d2cd86; ">.</span>open<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QIODevice</span><span style="color:#b060b0; ">::</span>ReadOnly <span style="color:#d2cd86; ">|</span> <span style="color:#e66170; font-weight:bold; ">QFile</span><span style="color:#b060b0; ">::</span>Text<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+                            <span style="color:#e66170; font-weight:bold; ">QMessageBox</span><span style="color:#b060b0; ">::</span>warning<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Warning</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Cannot open file: </span><span style="color:#02d045; ">"</span> <span style="color:#d2cd86; ">+</span> file<span style="color:#d2cd86; ">.</span>errorString<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">return</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                        setWindowTitle<span style="color:#d2cd86; ">(</span>fileName<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QTextStream</span> in<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">&amp;</span>file<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QString</span> text <span style="color:#d2cd86; ">=</span> in<span style="color:#d2cd86; ">.</span>readAll<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setText<span style="color:#d2cd86; ">(</span>text<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        file<span style="color:#d2cd86; ">.</span>close<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>save<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QString</span> fileName<span style="color:#b060b0; ">;</span>
+                        <span style="color:#9999a9; ">// If we don't have a filename from before, get one.</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>currentFile<span style="color:#d2cd86; ">.</span>isEmpty<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+                            fileName <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">QFileDialog</span><span style="color:#b060b0; ">::</span>getSaveFileName<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Save</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            currentFile <span style="color:#d2cd86; ">=</span> fileName<span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span> <span style="color:#e66170; font-weight:bold; ">else</span> <span style="color:#b060b0; ">{</span>
+                            fileName <span style="color:#d2cd86; ">=</span> currentFile<span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                        <span style="color:#e66170; font-weight:bold; ">QFile</span> file<span style="color:#d2cd86; ">(</span>fileName<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">!</span>file<span style="color:#d2cd86; ">.</span>open<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QIODevice</span><span style="color:#b060b0; ">::</span>WriteOnly <span style="color:#d2cd86; ">|</span> <span style="color:#e66170; font-weight:bold; ">QFile</span><span style="color:#b060b0; ">::</span>Text<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+                            <span style="color:#e66170; font-weight:bold; ">QMessageBox</span><span style="color:#b060b0; ">::</span>warning<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Attention</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">this file Cannot be save : </span><span style="color:#02d045; ">"</span> <span style="color:#d2cd86; ">+</span> file<span style="color:#d2cd86; ">.</span>errorString<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">return</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                        setWindowTitle<span style="color:#d2cd86; ">(</span>fileName<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QTextStream</span> out<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">&amp;</span>file<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QString</span> text <span style="color:#d2cd86; ">=</span> ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>toPlainText<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        out <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span> text<span style="color:#b060b0; ">;</span>
+                        file<span style="color:#d2cd86; ">.</span>close<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>saveAs<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QString</span> fileName <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">QFileDialog</span><span style="color:#b060b0; ">::</span>getSaveFileName<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Save as</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QFile</span> file<span style="color:#d2cd86; ">(</span>fileName<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">!</span>file<span style="color:#d2cd86; ">.</span>open<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">QFile</span><span style="color:#b060b0; ">::</span>WriteOnly <span style="color:#d2cd86; ">|</span> <span style="color:#e66170; font-weight:bold; ">QFile</span><span style="color:#b060b0; ">::</span>Text<span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span> <span style="color:#b060b0; ">{</span>
+                            <span style="color:#e66170; font-weight:bold; ">QMessageBox</span><span style="color:#b060b0; ">::</span>warning<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">Attention</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">,</span> <span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">this file Cannot be save : </span><span style="color:#02d045; ">"</span> <span style="color:#d2cd86; ">+</span> file<span style="color:#d2cd86; ">.</span>errorString<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            <span style="color:#e66170; font-weight:bold; ">return</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                        currentFile <span style="color:#d2cd86; ">=</span> fileName<span style="color:#b060b0; ">;</span>
+                        setWindowTitle<span style="color:#d2cd86; ">(</span>fileName<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QTextStream</span> out<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">&amp;</span>file<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QString</span> text <span style="color:#d2cd86; ">=</span> ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>toPlainText<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        out <span style="color:#d2cd86; ">&lt;</span><span style="color:#d2cd86; ">&lt;</span> text<span style="color:#b060b0; ">;</span>
+                        file<span style="color:#d2cd86; ">.</span>close<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span><span style="color:#e66170; font-weight:bold; ">exit</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">QCoreApplication</span><span style="color:#b060b0; ">::</span>quit<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span><span style="color:#e66170; font-weight:bold; ">copy</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                    
+                        ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span><span style="color:#e66170; font-weight:bold; ">copy</span><span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>cut<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                    
+                        ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>cut<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>paste<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                    
+                        ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>paste<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>undo<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                         ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>undo<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>redo<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>redo<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>selectFont<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">bool</span> fontSelected<span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">QFont</span> font <span style="color:#d2cd86; ">=</span> <span style="color:#e66170; font-weight:bold; ">QFontDialog</span><span style="color:#b060b0; ">::</span>getFont<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">&amp;</span>fontSelected<span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#e66170; font-weight:bold; ">if</span> <span style="color:#d2cd86; ">(</span>fontSelected<span style="color:#d2cd86; ">)</span>
+                            ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>setFont<span style="color:#d2cd86; ">(</span>font<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span> about<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                       <span style="color:#e66170; font-weight:bold; ">QMessageBox</span><span style="color:#b060b0; ">::</span>about<span style="color:#d2cd86; ">(</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span> <span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">About TextEditor</span><span style="color:#02d045; ">"</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">,</span>
+                                    <span style="color:#e66170; font-weight:bold; ">tr</span><span style="color:#d2cd86; ">(</span><span style="color:#02d045; ">"</span><span style="color:#00c4c4; ">The &lt;b&gt;TextEditor&lt;/b&gt; The application is a small text editor which allows you to create a text file,</span><span style="color:#02d045; ">"</span>
+                                       <span style="color:#02d045; ">"</span><span style="color:#00c4c4; "> save it, print it and other things …..</span><span style="color:#02d045; ">"</span>
+                                       <span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    <span style="color:#e66170; font-weight:bold; ">void</span> MainWindow<span style="color:#b060b0; ">::</span>clear<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">{</span>
+                    
+                            ui<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>textEdit<span style="color:#d2cd86; ">-</span><span style="color:#d2cd86; ">&gt;</span>clear<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    
+                    MainWindow<span style="color:#b060b0; ">::</span><span style="color:#d2cd86; ">~</span>MainWindow<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                    <span style="color:#b060b0; ">{</span>
+                        <span style="color:#e66170; font-weight:bold; ">delete</span> ui<span style="color:#b060b0; ">;</span>
+                    <span style="color:#b060b0; ">}</span>
+                    </pre>
+
+
+
+
+
+
+
+                <p style="color:#979797">It will display the following form: </p>
+
+
+                <div class="center">
+                    <img src="./image/4.PNG" />
+                    <div class="figcaption">
+                        texteditor output.
+                    </div>
+                </div>
+                <blockquote>
+                    <p style="color:#979797">In the <a href="https://github.com/amalfati/TextEditor.git"><strong>texteditor</strong></a> you will find the zip of this exercise.
+
+                </blockquote>
+
+                </p>
+
+
+
+
+
+
+
+
+                <h1 id="Issues" style="color:#a30000"><u>Issues</u></h1>
+
+
+
+
+
+                <p style="color:#a3a3a3">We find issues while compiling the code of (Select Row, Select Col, update recent files) </p>
+                <p style="color:#a3a3a3">Select Row / Select Col </p>
+
+
+
+
+                <pre style="color:#d1d1d1;background:#000000;">
+                    <span style="color:#e66170; font-weight:bold; ">void</span> selectCurrentRow<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> selectCurrentColumn<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    <span style="color:#e66170; font-weight:bold; ">void</span> selectCurrentAll<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                    </pre>
+
+                <pre style="color:#d1d1d1;background:#000000;">
+                    <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>selectCurrentRow<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                        <span style="color:#b060b0; ">{</span>
+                            selectRow<span style="color:#d2cd86; ">(</span>currentRow<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                        
+                        <span style="color:#e66170; font-weight:bold; ">void</span> SpreadSheet<span style="color:#b060b0; ">::</span>selectCurrentColumn<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span>
+                        <span style="color:#b060b0; ">{</span>
+                            selectColumn<span style="color:#d2cd86; ">(</span>currentColumn<span style="color:#d2cd86; ">(</span><span style="color:#d2cd86; ">)</span><span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                        <span style="color:#b060b0; ">}</span>
+                        </pre>
+
+                <pre style="color:#d1d1d1;background:#000000;"><span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>row<span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>selectCurrentRow<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+  <span style="color:#e66170; font-weight:bold; ">connect</span><span style="color:#d2cd86; ">(</span>Column<span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span><span style="color:#e66170; font-weight:bold; ">QAction</span><span style="color:#b060b0; ">::</span>triggered<span style="color:#d2cd86; ">,</span><span style="color:#e66170; font-weight:bold; ">this</span><span style="color:#d2cd86; ">,</span><span style="color:#d2cd86; ">&amp;</span>SpreadSheet<span style="color:#b060b0; ">::</span>selectCurrentColumn<span style="color:#d2cd86; ">)</span><span style="color:#b060b0; ">;</span>
+                            </pre>
+
+
+
+
+
+
+
+
+
+
+                </article>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="post">
+
+                <div>
+                    <h1 id="conclusion">
+                        <u style="color:#a50202">Conclusion</u></h1>
+
+                    <p>
+                        <div class="center" style="color:#979797">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Qt Designer is a powerful tool when it comes to creating GUIs using Qt allows us to quickly build windows with the mouse. To avoid writing many lines of
+                            code. The most useful features that has the ability to arrange your widgets in different types of layouts. To generate the interaction between this widgets, the method of signals and slots (SIGNAL-SLOT) is used.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; This experience give us an idea of how easy it is to write GUI applications using Qt .We improved many of the techniques
+                            for example, to create a main window complete with menus, toolbars, and a status bar.
+                        </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="site-footer">
+
+        <div class="wrapper">
+
+
+
+            <div class="footer-col-wrapper">
+                <div class="footer-col footer-col-1">
+                    <ul class="contact-list">
+                        <li class="p-name">Amal Lamini </li>
+                        <li><a class="u-email" href="lamini.amal2001@gmail.com">lamini.amal2001@gmail.com</a></li>
+                    </ul>
+                    <ul class="contact-list">
+                        <li class="p-name">Fatima Ezzahra Seffari</li>
+                        <li><a class="u-email" href="fatimaezzahraseffari3@gmail.com">fatimaezzahraseffari3@gmail.com</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-col-2">
+                    <ul class="social-media-list">
+                        <li><a href="https://github.com/amalfati" target="_blank"><i class="fab fa-github"></i> <span class="username">https://github.com/amalfati</span></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
